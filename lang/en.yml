@@ -1,0 +1,17 @@
+title: "NeoMachinery Wiki"
+home_intro: "Advanced industrial technology for Minecraft."
+
+blocks: "Blocks"
+items: "Items"
+
+coal_generator: "Coal Generator"
+coal_generator_desc: "Generates energy using coal as fuel."
+
+solar_generator: "Solar Generator"
+solar_generator_desc: "Produces energy during the day."
+
+steel: "Steel"
+steel_desc: "Basic industrial material used in advanced crafting."
+
+steel_plate: "Steel Plate"
+steel_plate_desc: "Compressed steel used in machinery recipes."
