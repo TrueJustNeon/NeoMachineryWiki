@@ -1,104 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
-
-:root {
-    --bg-dark: #0f1115;
-    --panel: #1a1d24;
-    --accent: #00ffcc;
-    --accent-soft: #00bfa6;
-    --text: #e4e6eb;
-    --danger: #ff4d4d;
-}
-
 body {
     margin: 0;
-    font-family: 'Orbitron', sans-serif;
-    background: var(--bg-dark);
-    color: var(--text);
+    font-family: monospace;
+    background: #2b2b2b;
+    color: #e0e0e0;
 }
 
 header {
-    background: linear-gradient(90deg, #0f1115, #141821);
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid var(--accent);
+    background: #1f1f1f;
+    padding: 12px 20px;
+    border-bottom: 2px solid #3c3c3c;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    color: var(--accent);
+    font-size: 20px;
+    letter-spacing: 2px;
 }
 
-nav {
+.layout {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+}
+
+.sidebar {
+    width: 220px;
+    background: #242424;
+    border-right: 2px solid #3a3a3a;
     padding: 15px;
-    background: var(--panel);
 }
 
-nav a {
-    color: var(--text);
+.sidebar a {
+    display: block;
+    color: #cfcfcf;
     text-decoration: none;
-    transition: 0.2s;
+    padding: 6px 0;
 }
 
-nav a:hover {
-    color: var(--accent);
+.sidebar a:hover {
+    color: #ffffff;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 20px;
+.content {
+    flex: 1;
+    padding: 20px 40px;
 }
 
-.card {
-    background: var(--panel);
-    padding: 20px;
-    margin-bottom: 25px;
-    border-left: 4px solid var(--accent);
-    border-radius: 8px;
-    transition: 0.2s;
+.panel {
+    background: #1e1e1e;
+    border: 2px solid #3c3c3c;
+    padding: 15px;
+    margin-bottom: 20px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0,255,204,0.2);
-}
-
-.card h2 {
+.panel h2 {
     margin-top: 0;
-    color: var(--accent);
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
 }
 
-.tag {
-    display: inline-block;
-    padding: 4px 8px;
-    font-size: 0.75rem;
-    background: #222;
-    border: 1px solid var(--accent-soft);
-    border-radius: 4px;
-    margin-bottom: 10px;
+/* Crafting Grid */
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 48px);
+    grid-gap: 4px;
+    margin-top: 10px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #141821;
-    border-top: 1px solid var(--accent);
+.slot {
+    width: 48px;
+    height: 48px;
+    background-image: url("../../assets/inventory/slot.png");
+    background-size: cover;
+    position: relative;
 }
 
-.lang-switch {
+.slot img {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    width: 32px;
+    height: 32px;
+    top: 8px;
+    left: 8px;
 }
 
-button {
-    background: var(--accent);
-    border: none;
-    padding: 6px 10px;
-    cursor: pointer;
-    font-weight: bold;
+.recipe-output {
+    margin-top: 10px;
 }
