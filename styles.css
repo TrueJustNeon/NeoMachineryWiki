@@ -217,3 +217,42 @@ h2 {
     font-weight: normal;
     color: #b4b4b4;
 }
+
+/* ------------ Error ------------ */
+
+.error-box {
+    display: flex;
+    align-items: center;   /* centers icon vertically */
+    gap: 12px;
+
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(120, 0, 0, 0.15);
+    box-shadow: 0 0px 7px rgb(207, 43, 65);
+    border: 1px solid rgba(240, 20, 75, 0.4);
+    margin: 15px 0;
+}
+
+.error-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.error-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.error-text .error-title {
+    font-size: 20px;               /* big bold text */
+    font-weight: bold;
+    color: #b4b4b4;
+}
+
+.error-text .error-desc {
+    font-size: 15px;               /* medium normal text */
+    font-weight: normal;
+    color: #b4b4b4;
+}

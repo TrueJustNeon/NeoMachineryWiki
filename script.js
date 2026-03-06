@@ -62,6 +62,19 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </div>`
     );
+    /* ERROR */
+
+    const errorRegex = /\{\{error,name=(.*?),description=(.*?)\}\}/gs;
+
+    html = html.replace(errorRegex, (_, name, desc) =>
+        `<div class="error-box">
+            <img src="icons/error.png" class="error-icon">
+            <div class="error-text">
+                <div class="error-title">${name}</div>
+                <div class="error-desc">${desc}</div>
+            </div>
+        </div>`
+    );
 
 
     /* APPLY PARSED HTML */
