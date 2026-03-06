@@ -1,27 +1,45 @@
-async function loadLanguage(lang) {
-  try {
-    const response = await fetch(`/languages/${lang}.yml`);
-    const yamlText = await response.text();
-    const translations = jsyaml.load(yamlText);
-
-    document.getElementById("nav-home").textContent = translations.navHome;
-    document.getElementById("nav-articles").textContent = translations.navArticles;
-    document.getElementById("nav-categories").textContent = translations.navCategories;
-    document.getElementById("nav-about").textContent = translations.navAbout;
-    document.getElementById("welcome").textContent = translations.welcome;
-    document.getElementById("intro-text").textContent = translations.introText;
-    document.getElementById("sample-article-title").textContent = translations.sampleArticleTitle;
-    document.getElementById("sample-article-text").textContent = translations.sampleArticleText;
-    document.getElementById("footer-text").textContent = translations.footerText;
-  } catch (error) {
-    console.error("Error cargando idioma:", error);
-  }
-}
-
-// Listener para el selector
-document.getElementById("language").addEventListener("change", (e) => {
-  loadLanguage(e.target.value);
+document.addEventListener("DOMContentLoaded", () => {
+    const contentArea = document.getElementById("content-area");
+    
+    contentArea.innerHTML = contentArea.innerHTML.replace(/\{\{warning,\s*name=(.*?),\s*description=(.*?)\}\}/g, (_, name, description) => {
+        return `
+        <div class="warning">
+            <img src="icons/warn.png" alt="Warning" class="warning-icon">
+            <div class="warning-text">
+                <div class="warning-title">${name.trim()}</div>
+                <div class="warning-desc">${description.trim()}</div>
+            </div>
+        </div>
+        `;
+    });
 });
 
-// Idioma por defecto: inglés
-loadLanguage("en");
+document.addEventListener("DOMContentLoaded", () => {
+
+    const bg = document.querySelector("background");
+
+    if (!bg) return;
+
+    const image = bg.getAttribute("image");
+    const blur = bg.getAttribute("blur") || 0;
+    const dark = bg.getAttribute("dark") || 0;
+
+    const overlay = dark > 0
+        ? `linear-gradient(rgba(0,0,0,${dark}), rgba(0,0,0,${dark})),`
+        : "";
+
+    document.body.style.background =
+        `${overlay} url("backgrounds/${image}") center / cover no-repeat fixed`;
+
+    if (blur > 0) {
+        const blurLayer = document.createElement("div");
+        blurLayer.style.position = "fixed";
+        blurLayer.style.inset = "0";
+        blurLayer.style.background = `url("backgrounds/${image}") center / cover no-repeat`;
+        blurLayer.style.filter = `blur(${blur}px)`;
+        blurLayer.style.zIndex = "-1";
+        document.body.prepend(blurLayer);
+    }
+
+    bg.remove(); // remove the tag after applying
+});

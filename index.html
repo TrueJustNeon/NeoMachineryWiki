@@ -1,55 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NeoMachinery Wiki</title>
-  <link rel="stylesheet" href="style.css">
+<background image="Test.png"></background>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wiki</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1 id="title">NeoMachinery</h1>
-    <nav>
-      <ul>
-        <li><a href="#" id="nav-home">Inicio</a></li>
-        <li><a href="#" id="nav-articles">Artículos</a></li>
-        <li><a href="#" id="nav-categories">Categorías</a></li>
-        <li><a href="#" id="nav-about">Acerca de</a></li>
-      </ul>
-    </nav>
-    <div class="lang-select">
-      <label for="language">🌐 Idioma:</label>
-      <select id="language">
-        <option value="es">Español</option>
-        <option value="en">English</option>
-        <option value="ru">Русский</option>
-        <option value="de">Deutsch</option>
-        <option value="ca">Català</option>
-      </select>
-    </div>
-  </header>
-
-  <main>
-    <section class="intro">
-      <h2 id="welcome">Bienvenido a NeoMachinery</h2>
-      <p id="intro-text">Un wiki tecnológico con estética industrial y futurista.</p>
-    </section>
-
-    <section class="content">
-      <article>
-        <h3 id="sample-article-title">Artículo de ejemplo</h3>
-        <p id="sample-article-text">Este es un artículo de muestra. Sustituye este texto por el contenido de tu mod.</p>
-      </article>
-    </section>
-  </main>
-
-  <footer>
-    <p id="footer-text">© 2026 NeoMachinery Wiki</p>
-  </footer>
-
-  <!-- Librería global js-yaml -->
-  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
-  <!-- Tu script principal -->
-  <script src="script.js"></script>
+<div class="topbar">
+  <a href="index.html" class="topbar-button">
+        <img src="icons/neo.png" alt="NeoMachinery" class="icon">
+        NeoMachinery
+    </a>
+    <a href="wiki.html" class="topbar-button">
+        <img src="icons/wiki.png" alt="Wiki" class="icon">
+        Wiki
+    </a>
+    <a href="downloads.html" class="topbar-button">
+        <img src="icons/download.png" alt="Downloads" class="icon">
+        Downloads
+    </a>
+    <a href="support.html" class="topbar-button">
+        <img src="icons/support.png" alt="Support" class="icon">
+        Support
+    </a>
+    
+</div>
+<div class="center-square">
+    <div class="square" id="main-square">
+      <div id="content-area">
+</div>
+        <h1>NeoMachinery</h1>
+        <p>Neon's dream tech mod</p>
+        <hr>
+        <h2>What does this mod do?</h2>
+        <p>This mod adds various types of machinery to progress further and automate things.</p>
+      </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
+      <!--    
+        {{warning,
+       name=Big Bold Text,
+        description=This is the medium normal text describing the warning very peakest peak, did you know? old roblox goes boing boing yes? yes, oud roblox, yes, the old hunt event.
+      }}
+        -->
