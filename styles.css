@@ -47,7 +47,7 @@ p {
 h2 {
   font-size: 0.70em;
 }
-/* Topbar with individual button boxes */
+/* ------------ Topbar with individual button boxes ------------ */
 .topbar {
     display: flex;
     height: 55px;             /* desired height */
@@ -101,7 +101,7 @@ h2 {
     transform: scale(1.1);
 }
 
-/* Centered square */
+/* ------------ Centered square ------------ */
 .center-square {
     flex: 1;
     display: flex;
@@ -139,16 +139,19 @@ h2 {
     overflow-y: auto;
 }
 
-/* Warning */
+/* ------------ Warning ------------ */
+
 .warning-box {
     display: flex;
-    align-items: flex-start;       /* icon top aligned with text */
-    gap: 10px;
-    background-color: #2a2a2a;
-    border: 2px solid #cf8d16;
-    box-shadow: 0 0px 7px rgb(207, 141, 22);
-    border-radius: 10px;
+    align-items: center;   /* centers icon vertically */
+    gap: 12px;
+
     padding: 15px;
+    border-radius: 10px;
+
+    box-shadow: 0 0px 7px rgb(207, 141, 22);
+    background: rgba(120, 90, 0, 0.15);
+    border: 1px solid rgba(255,200,0,0.4);
     margin: 15px 0;
 }
 
@@ -171,6 +174,45 @@ h2 {
 }
 
 .warning-text .warning-desc {
+    font-size: 15px;               /* medium normal text */
+    font-weight: normal;
+    color: #b4b4b4;
+}
+
+/* ------------ Info ------------ */
+
+.info-box {
+    display: flex;
+    align-items: center;   /* centers icon vertically */
+    gap: 12px;
+
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(0, 112, 120, 0.15);
+    box-shadow: 0 0px 7px rgb(0, 225, 255);
+    border: 1px solid rgba(20, 240, 229, 0.4);
+    margin: 15px 0;
+}
+
+.info-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-text .info-title {
+    font-size: 20px;               /* big bold text */
+    font-weight: bold;
+    color: #b4b4b4;
+}
+
+.info-text .info-desc {
     font-size: 15px;               /* medium normal text */
     font-weight: normal;
     color: #b4b4b4;
