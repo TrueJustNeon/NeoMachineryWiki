@@ -140,12 +140,13 @@ h2 {
 }
 
 /* Warning */
-.warning {
+.warning-box {
     display: flex;
     align-items: flex-start;       /* icon top aligned with text */
     gap: 10px;
     background-color: #2a2a2a;
     border: 2px solid #cf8d16;
+    box-shadow: 0 0px 7px rgb(207, 141, 22);
     border-radius: 10px;
     padding: 15px;
     margin: 15px 0;
