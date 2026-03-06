@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeoMachinery Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="title">NeoMachinery</h1>
+    <nav>
+      <ul>
+        <li><a href="#" id="nav-home">Inicio</a></li>
+        <li><a href="#" id="nav-articles">Artículos</a></li>
+        <li><a href="#" id="nav-categories">Categorías</a></li>
+        <li><a href="#" id="nav-about">Acerca de</a></li>
+      </ul>
+    </nav>
+    <div class="lang-select">
+      <label for="language">🌐 Idioma:</label>
+      <select id="language">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+        <option value="de">Deutsch</option>
+        <option value="ca">Català</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2 id="welcome">Bienvenido a NeoMachinery</h2>
+      <p id="intro-text">Un wiki tecnológico con estética industrial y futurista.</p>
+    </section>
+
+    <section class="content">
+      <article>
+        <h3 id="sample-article-title">Artículo de ejemplo</h3>
+        <p id="sample-article-text">Este es un artículo de muestra. Sustituye este texto por el contenido de tu mod.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p id="footer-text">© 2026 NeoMachinery Wiki</p>
+  </footer>
+
+  <!-- Librería global js-yaml -->
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <!-- Tu script principal -->
+  <script src="script.js"></script>
+</body>
+</html>
