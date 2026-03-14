@@ -256,3 +256,20 @@ h2 {
     font-weight: normal;
     color: #b4b4b4;
 }
+
+/* MISC */
+.item-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 1;
+}
+.slot-box {
+    display: flex;
+    align-items: center;      /* vertical center */
+    justify-content: center;  /* horizontal center */
+    width: 64px;
+    height: 64px;
+    background-image: url("icons/slot.png");
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+}
