@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </div>`
     );
+
     /* ERROR */
 
     const errorRegex = /\{\{error,name=(.*?),description=(.*?)\}\}/gs;
@@ -75,13 +76,25 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         </div>`
     );
+    
+    /* FACT */
+
+    const factRegex = /\{\{fact,name=(.*?),description=(.*?)\}\}/gs;
+
+    html = html.replace(factRegex, (_, name, desc) =>
+        `<div class="fact-box">
+            <img src="icons/fact.png" class="fact-icon">
+            <div class="fact-text">
+                <div class="fact-title">${name}</div>
+                <div class="fact-desc">${desc}</div>
+            </div>
+        </div>`
+    );
+
 
 
     /* APPLY PARSED HTML */
 
     document.body.innerHTML = html;
-
-
-    
 
 });
