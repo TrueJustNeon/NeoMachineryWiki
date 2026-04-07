@@ -1,10 +1,10 @@
-fetch('contents.md')
-  .then(response => response.text())
+const params = new URLSearchParams(window.location.search);
+const doc = params.get('doc') || 'contents';
+
+fetch(doc + '.md')
+  .then(res => res.text())
   .then(md => {
     document.getElementById('md-content').innerHTML = marked.parse(md);
-  })
-  .catch(err => {
-    console.error('Failed to load markdown:', err);
   });
   
 document.addEventListener("DOMContentLoaded", () => {

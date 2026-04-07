@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown en HTML</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div id="contenido"></div>
+  <script>
+    // Opción B: Cargar un archivo .md externo
+     fetch('contenido.md')
+       .then(r => r.text())
+       .then(md => {
+         document.getElementById('contenido').innerHTML = marked.parse(md);
+       });
+  </script>
+</body>
+</html>
