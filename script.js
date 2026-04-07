@@ -1,3 +1,12 @@
+fetch('contents.md')
+  .then(response => response.text())
+  .then(md => {
+    document.getElementById('md-content').innerHTML = marked.parse(md);
+  })
+  .catch(err => {
+    console.error('Failed to load markdown:', err);
+  });
+  
 document.addEventListener("DOMContentLoaded", () => {
 
     /* ---------------- BACKGROUND ---------------- */
