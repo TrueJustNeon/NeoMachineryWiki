@@ -9,7 +9,7 @@
   <div id="contenido"></div>
   <script>
     // Opción B: Cargar un archivo .md externo
-     fetch('contenido.md')
+     fetch('content.md')
        .then(r => r.text())
        .then(md => {
          document.getElementById('contenido').innerHTML = marked.parse(md);
