@@ -11,6 +11,5 @@
       })
       .catch(err => {
         document.getElementById('md-content').innerHTML = 
-          `<p class="error">No se pudo cargar el Markdown.<br>${err.message}<br>
-          Tip: usa la URL "Raw" de GitHub (botón Raw → copiar enlace).</p>`;
+          `${err.message}, please try again later.`;
       });
