@@ -7,5 +7,7 @@ g { color: Green }
 # TODOs:
 
 <r>TODO:</r> Important thing to do
+<br>
 <o>TODO:</o> Less important thing to do
+<br>
 <g>DONE:</g> Breath deeply and improve karma
